@@ -1,11 +1,22 @@
-.container{
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1f1f2e;
+  font-family: sans-serif;
+}
+
+.container {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 100px;
+  padding: 100px 20px 40px;
 }
 
-h1{
+h1 {
   color: white;
   font-size: 28px;
   text-align: center;
@@ -13,14 +24,14 @@ h1{
 
 form {
   display: flex;
-  flex-direction: column ;
-  gap: 30px;
+  flex-direction: column;
+  gap: 20px;
   padding: 30px;
   border-radius: 10px;
   background-color: #463b50;
-  max-width: 50%;
-  width: 400px;
-  margin-bottom: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 30px;
 
   & button {
     border-radius: 30px;
@@ -31,52 +42,75 @@ form {
     cursor: pointer;
     font-size: 14px;
     color: white;
+    transition: opacity 0.2s ease-in-out;
   }
 
-  & button:hover{
+  & button:hover {
     opacity: 0.8;
-
   }
 
-  & input{
+  & input {
     border: 1px solid #48456c;
     border-radius: 30px;
     height: 40px;
-    background-color: #363653 ;
+    background-color: #363653;
     outline: none;
     color: white;
     font-size: 16px;
     padding-left: 10px;
-
-
+    width: 100%;
   }
 }
 
-
-.card{
+.card {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  padding: 10px;
-  margin: 10px;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  margin: 10px 0;
   border-radius: 10px;
   background-color: #463b50;
-  width: 400px;
-  
-   & p{
+  width: 100%;
+  max-width: 500px;
+
+  & p {
     color: white;
     font-weight: bold;
+    margin: 5px 0;
 
-    & span{
+    & span {
       font-weight: normal;
     }
-   }
+  }
 
-   & button{
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-   }
-   & button:hover{
+  & button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  & button:hover {
     opacity: 0.5;
-   }
+  }
+}
+
+@media (max-width: 500px) {
+  form, .card {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card button {
+    align-self: flex-end;
+  }
 }
