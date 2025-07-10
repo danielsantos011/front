@@ -5,8 +5,8 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #1f1f2e;
-  font-family: sans-serif;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #005aa7, #5f2c82);
 }
 
 .container {
@@ -28,14 +28,14 @@ form {
   gap: 20px;
   padding: 30px;
   border-radius: 10px;
-  background-color: #463b50;
+  background-color: rgba(31, 31, 46, 0.9);
   width: 100%;
   max-width: 500px;
   margin-bottom: 30px;
 
   & button {
     border-radius: 30px;
-    background-color: #41295a;
+    background: linear-gradient(to right, #00cfff, #005aa7);
     height: 40px;
     border: none;
     font-weight: bold;
@@ -50,10 +50,10 @@ form {
   }
 
   & input {
-    border: 1px solid #48456c;
+    border: 1px solid #00cfff;
     border-radius: 30px;
     height: 40px;
-    background-color: #363653;
+    background-color: #2a2a3b;
     outline: none;
     color: white;
     font-size: 16px;
@@ -64,16 +64,19 @@ form {
 
 .card {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
-  padding: 15px;
+  gap: 15px;
+  padding: 20px;
   margin: 10px 0;
   border-radius: 10px;
-  background-color: #463b50;
+  background-color: rgba(31, 31, 46, 0.9);
   width: 100%;
   max-width: 500px;
+
+  & div {
+    flex: 1;
+  }
 
   & p {
     color: white;
@@ -89,15 +92,19 @@ form {
     background-color: transparent;
     border: none;
     cursor: pointer;
+    padding: 5px;
+    transition: transform 0.2s;
   }
 
   & button:hover {
-    opacity: 0.5;
+    transform: scale(1.1);
+    opacity: 0.7;
   }
 }
 
 @media (max-width: 500px) {
-  form, .card {
+  form,
+  .card {
     padding: 20px;
   }
 
